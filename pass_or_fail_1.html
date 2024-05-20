@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width: 150px;
+            height: 30px;
+            background-color: aqua;
+            font-size: 40px;
+            padding: 20px;
+        }
+        .pass{
+            background-color: green;
+        }
+        .fail{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>pass or fail</h3>
+    <div id="result"></div>
+    <script>
+        function pass_fail(){
+            let mcq = prompt("enter mcq marks", "");
+            let des = prompt("enter des marks", "");
+            let evi = prompt("Enter evi marks", "");
+            if(mcq >=80 && des>=60 && evi >=60){
+                //alert("pass");
+                document.getElementById("result").innerHTML = " <div class= 'pass'>pass</div>";
+            }
+            else{
+                //alert("fail");
+                document.getElementById("result").innerHTML = " <div class= 'fail'>fail</div>";
+
+            }
+        }
+    </script>
+    <button onclick="pass_fail()">click here</button>
+</body>
+</html>
