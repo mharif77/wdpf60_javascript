@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        function pass_fail(){
+            let mcq = prompt("Enter your mcq number","");
+            let des = prompt("Enter your des number","");
+            let evidenc = prompt("Enter your evidence number","");
+
+            if(mcq>=80 && des>=60 && evidenc>=60){
+                document.getElementById("result").innerHTML = "pass"
+            }
+            else {
+                document.getElementById("result").innerHTML = "fail"
+            }
+
+        }
+    </script>
+    <button onclick="pass_fail()">clcik here</button>
+</body>
+</html>
