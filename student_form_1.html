@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Student Form</h1>
+    <form name="myform">
+        
+        <input type="text" name="fullname" placeholder="Enter name"><br>
+        
+        <input type="text" name="address" placeholder="Enter address"><br>
+
+        <input type="text" name="id" placeholder="Enter id"><br>
+
+        <button type="button" onclick=" myFunction()">submit</button>
+
+    </form>
+<script>
+ function myFunction() {
+        
+        let fn = document.myform.fullname.value;
+        let add = document.myform.address.value;
+        let id = document.myform.id.value;
+        
+
+        if(fn==""){
+            alert("fullname must be entered");
+        }
+        else if(add==""){
+            alert("full address must be entered");
+        }
+
+        else if(id==""){
+            alert("full id must be entered");
+        }
+       else {
+
+        let mw = window.open("", "abc", "width=800, height=600"); 
+       let output;
+       output = "<h1>Student Information</h1>";
+       output += "fullname: " + fn + "<br>";
+       output += "address: " + add + "<br>";
+       output += "id: " + id + "<br>";
+
+       mw.document.write(output);
+
+       }
+    }
+</script>
+   
+</body>
+</html>

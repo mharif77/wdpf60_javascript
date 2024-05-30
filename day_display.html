@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Answer to the Question no: 2</h1>
+    <form action="" name="dateform">
+        <input type="date" name="date">
+        <button type="button" onclick="showDay()">show</button>
+
+    </form>
+    <script>
+        function showDay(){
+            let x = document.dateform.date.value;
+
+            let days = ["sunday","monday","tuesday","wednesday","thursday","friday"];
+            let 
+
+            const d = new Date(x);
+
+            alert(days[d.getDay()])
+         }
+    </script>
+</body>
+</html>
