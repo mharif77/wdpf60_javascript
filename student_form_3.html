@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Answer to the Question no: 1</h1>
+    <form name="myform">
+        <fieldset>
+            <legend>Student Form</legend>
+        <label for="">first name: </label> <input type="text" name="firstname" placeholder="Enter your first name"><br><br>
+       
+        <label for="">last name:</label> <input type="text" name="lastname" placeholder="Enter your last name"><br><br>
+
+        <label for="">Gender:</label> <label for="">Male</label> <input type="radio" name="Gender" id=""> <label for="">Female</label> <input type="radio" name="Gender" id=""> <br><br>
+
+        <label for="">Languages:</label> <label for="">Bangla</label> <input type="radio" name="Languages" id=""> <label for="">English</label>
+        <input type="radio" name="Languages" id=""> <label for="">Hindi</label> <input type="radio" name="Languages" id=""> <br><br>
+        
+        <label for="">Email:</label><input type="text" name="Email" placeholder="Enter your Email"><br><br>
+
+        <label for="">address:</label><textarea name="address" id="" cols="20" rows="05" placeholder="Enter your address"></textarea><br><br>
+
+        <label for="State">State:</label> <select name="state" id="">
+            <option value="">choose State</option>
+            <option value="">Bangladesh</option>
+            <option value="">England</option>
+            <option value="">Japan</option>
+            <option value="">Canada</option>
+            <option value="">Australia</option>
+        </select><br><br>
+
+        <label for="">Zip:</label> <input type="text" name="Zip" placeholder="Enter your Zip code"><br><br>
+
+
+        <label for="credit card type">credit card type:</label> <select name="card" id="">
+            <option value="">choose credit card </option>
+            <option value="">visa card</option>
+            <option value="">master card</option>
+            <option value="">dual currency card</option>
+        </select><br><br>
+        <button type="button" onclick=" myFunction()">submit</button>
+    </fieldset>
+    </form>
+<script>
+ function myFunction() {
+        
+        let fn = document.myform.firstname.value;
+        let ln = document.myform.lastname.value;
+        let gd = document.myform.Gender.value;
+        let lg = document.myform.Languages.value;
+        let Email = document.myform.Email.value;
+        let add = document.myform.address.value;
+        let st = document.myform.state.value;
+        let Zip = document.myform.Zip.value;
+        let card = document.myform.card.value;
+        
+
+        if(fn==""){
+            alert("firstname must be entered");
+        }
+        else if(ln==""){
+            alert("last name must be entered");
+        }
+        else if(gd==""){
+            alert("Gender must be entered");
+        }
+        else if(lg==""){
+            alert("Languages must be entered");
+        }
+        else if(Email==""){
+            alert("Email must be entered");
+        }
+
+        else if(add==""){
+            alert("address must be entered");
+        }
+
+        else if(st==""){
+            alert("state must be choose one");
+        }
+        else if(Zip==""){
+            alert(" Zip must be entered");
+        }
+        else if(card==""){
+            alert("card must be choose one");
+        }
+       else {
+
+        let mw = window.open("", "abc", "width=800, height=600"); 
+       let output;
+       output = "<h1>Student Information</h1>";
+       output += "fullname: " + fn + "<br>";
+       output += "lastname: " + ln + "<br>";
+       output += "Gender: " + gd + "<br>";
+       output += "Languages: " + lg + "<br>";
+       output += "Email: " + Email + "<br>";
+       output += "address: " + add + "<br>";
+       output += "st: " + state + "<br>";
+       output += "Zip: " + Zip + "<br>";
+       output += "card: " + card + "<br>";
+       
+       
+
+
+
+
+       mw.document.write(output);
+
+       }
+    }
+</script>
+</body>
+</html>
