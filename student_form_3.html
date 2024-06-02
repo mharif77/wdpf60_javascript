@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1>Answer to the Question no: 1</h1>
     <form name="myform">
         <fieldset>
-            <legend>Student Form</legend>
+            <legend>Billing Information</legend>
         <label for="">first name: </label> <input type="text" name="firstname" placeholder="Enter your first name"><br><br>
        
         <label for="">last name:</label> <input type="text" name="lastname" placeholder="Enter your last name"><br><br>
@@ -21,7 +22,7 @@
         
         <label for="">Email:</label><input type="text" name="Email" placeholder="Enter your Email"><br><br>
 
-        <label for="">address:</label><textarea name="address" id="" cols="20" rows="05" placeholder="Enter your address"></textarea><br><br>
+        <label for="">address:</label><textarea name="address" id="" cols="20" rows="03" placeholder="Enter your address"></textarea><br><br>
 
         <label for="State">State:</label> <select name="state" id="">
             <option value="">choose State</option>
@@ -44,6 +45,7 @@
         <button type="button" onclick=" myFunction()">submit</button>
     </fieldset>
     </form>
+
 <script>
  function myFunction() {
         
@@ -58,47 +60,47 @@
         let card = document.myform.card.value;
         
 
-        if(fn==""){
-            alert("firstname must be entered");
-        }
-        else if(ln==""){
-            alert("last name must be entered");
-        }
-        else if(gd==""){
-            alert("Gender must be entered");
-        }
-        else if(lg==""){
-            alert("Languages must be entered");
-        }
-        else if(Email==""){
-            alert("Email must be entered");
-        }
+    //     if(fn==""){
+    //         alert("firstname must be entered");
+    //     }
+    //     else if(ln==""){
+    //         alert("last name must be entered");
+    //     }
+    //     else if(gd==""){
+    //         alert("Gender must be entered");
+    //     }
+    //     else if(lg==""){
+    //         alert("Languages must be entered");
+    //     }
+    //     else if(Email==""){
+    //         alert("Email must be entered");
+    //     }
 
-        else if(add==""){
-            alert("address must be entered");
-        }
+    //     else if(add==""){
+    //         alert("address must be entered");
+    //     }
 
-        else if(st==""){
-            alert("state must be choose one");
-        }
-        else if(Zip==""){
-            alert(" Zip must be entered");
-        }
-        else if(card==""){
-            alert("card must be choose one");
-        }
-       else {
+    //     else if(st==""){
+    //         alert("state must be choose one");
+    //     }
+    //     else if(Zip==""){
+    //         alert(" Zip must be entered");
+    //     }
+    //     else if(card==""){
+    //         alert("card must be choose one");
+    //     }
+    //    else {
 
         let mw = window.open("", "abc", "width=800, height=600"); 
        let output;
-       output = "<h1>Student Information</h1>";
-       output += "fullname: " + fn + "<br>";
+       output = "<h1>Billing Information</h1>";
+       output += "firstname: " + fn + "<br>";
        output += "lastname: " + ln + "<br>";
        output += "Gender: " + gd + "<br>";
        output += "Languages: " + lg + "<br>";
        output += "Email: " + Email + "<br>";
        output += "address: " + add + "<br>";
-       output += "st: " + state + "<br>";
+       output += "state: " + st + "<br>";
        output += "Zip: " + Zip + "<br>";
        output += "card: " + card + "<br>";
        
@@ -110,7 +112,8 @@
        mw.document.write(output);
 
        }
-    }
+    //}
+    
 </script>
 </body>
 </html>
