@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" name="myform">
+        <fieldset>
+            <legend>Training data</legend>
+       name: <input type="text" name="name" placeholder="Enter your name"><br><br>
+       contact: <input type="text" name="contact" placeholder="Enter your contact"><br><br>
+       Remarks: <br> <textarea name="Remarks" cols="19" rows="02"></textarea> <br><br>
+
+       Gender: male<input type="radio" name="Gender" value="male">
+
+           female<input type="radio" name="Gender" value="female"><br><br>
+
+           courses: 
+        <input type="checkbox" name="NT" value="NT" class="courses">NT
+        <input type="checkbox" name="IAD" value="IAD" class="courses">IAD
+        <input type="checkbox" name="DDD" value="DDD" class="courses">DDD
+        <input type="checkbox" name="ESAD" value="ESAD" class="courses">ESAD <br><br>
+           location: <select name="location" id="">
+            <option value="choose location">choose location</option>
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="mirpur">mirpur</option>
+
+           </select> <br><br>
+           <input type="button" onclick="myfunction()" value="submit"><br>
+        </fieldset>
+    </form>
+    <script>
+        function myfunction(){
+            let name = document.myform.name.value;
+            let ct = document.myform.contact.value;
+            let rk = document.myform.Remarks.value;
+            let gd = document.myform.Gender.value;
+            let lc = document.myform.location.value;
+            const courses = document.getElementsByClassName("courses");
+            let data = "";
+            for(let i= 0; i<courses.length; i++){
+                if(courses[i].checked){
+                    data += courses[i].value +", ";
+                }
+            }
+            
+            //alert(Remarks);
+
+            let output;
+       output = "<h1> Training data</h1>";
+       output += "name " + name + "<br>";
+       output += "contact " + ct + "<br>";
+       output += "Remarks " + rk + "<br>";
+       output += "Gender " + gd + "<br>";
+       output += "location " + lc + "<br>";
+       output += "courses " + data + "<br>";
+       
+       let mw = window.open("", "abc", "width=800, height=600");
+       mw.document.write(output);
+
+        }
+    </script>
+</body>
+</html>

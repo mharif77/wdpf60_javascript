@@ -8,12 +8,35 @@
 <body>
     <form action="" name="myform">
         <label for="">Email:<br></label><input type="text" name="Email" placeholder="Enter your Email"><br>
-        <label for="">Re-mail:<br></label><input type="text" name="Re-mail" placeholder="Enter your Re-mail"><br>
+        <label for="">Re-mail:<br></label><input type="text" name="Remail" placeholder="Enter your Re-mail"><br>
         <label for="">password:<br></label><input type="text" name="password" placeholder="Enter your password"><br>
         <input type="button" onclick="validate()" name="submit" value="validate">
     </form>
     <script>
-      document.myform.number
+      function validate(){
+        let Email1 = document.myform.Email.value;
+        let Email2 = document.myform.Remail.value;
+        let password = document.myform.password.value;
+        let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+
+        let result =  Email1.search(pattern);
+
+        if(result == -1){
+            alert("not valid");
+
+        }
+           
+        else if(Email1 != Email2){
+            alert("not matched");
+        }
+        else if(password.length<7){
+            alert("not valid");
+        }
+        else{
+            alert("valid");
+        }
+
+      }
     </script>
 </body>
 </html>
