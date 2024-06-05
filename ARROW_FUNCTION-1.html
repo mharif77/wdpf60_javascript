@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        Email: <input type="text" name="Email" placeholder="Enter a Email"><br><br>
+        Confirm Email: <input type="text" name="Confirm_Email" placeholder="Enter a Confirm Email"><br><br>
+        password: <input type="text" name="password" placeholder="Enter a password"><br><br>
+        <button onclick="data()" type="button">Login</button>
+    </form>
+    <script>
+         data = () => {
+            let Email1 = document.myform.Email.value;
+            let Email2 = document.myform.Confirm_Email.value;
+            let password = document.myform.password.value;
+            // let pattern = /[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]/;
+            // let result = Email1.search(pattern);
+
+            // if(result== -1){
+            //     alert("Email not valid")
+            // }
+             if(Email1!=Email2){
+            alert("not matched");
+        }
+        // else if(password.length){
+        //     alert("not valid");
+        // }
+        else{
+            alert("valid");
+        }
+
+        } 
+    </script>
+</body>
+</html>

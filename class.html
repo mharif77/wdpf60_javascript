@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>student information</h3>
+<div id="show"></div>
+    <script>
+        class student {
+            constructor(name,dob,email,id,address){
+                this.stname = name;
+                this.stdob = dob;
+                this.stemail = email;
+                this.stid = id;
+                this.staddress = address;
+            }
+
+             info(){
+                let details = "<hr>";
+                details += "Name: "+ this.stname + "<br>";
+                details += "DOB: "+ this.stdob + "<br>";
+                details += "Email: "+ this.stemail + "<br>";
+                details += "ID: "+ this.stid + "<br>";
+                details += "Address: "+ this.staddress + "<br>";
+                return details;
+
+            }
+        }
+      const arif = new student("ARIF","1998-02-21","arifhasan077@gmail.com","1282038","BASABO");
+      const arif1 = new student("masud","1998-05-01","masud@gmail.com","1281977","FIRMGATE");
+     const arif2 = new student("noman","1996-07-11","noman084@gmail.com","1282007","malibagh");
+      // document.write(arif.info())
+      document.getElementById("show").innerHTML = arif.info() + arif1.info() + arif2.info();
+    </script>
+</body>
+</html>
