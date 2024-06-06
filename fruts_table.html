@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        caption{
+            color: blueviolet;
+            size: 50px;
+        }
+        table{
+            border: 2px solid lightgreen;
+            border-collapse: collapse;
+            background-color: lightpink;
+        }
+        th,td{
+            border: 2px solid rgb(80, 106, 117);
+            text-align: center;
+            border-collapse: collapse;
+            margin: 0 auto;
+            height: 50px;
+            width: 150px;
+            color: rgba(228, 13, 232, 0.477);
+            text-transform: capitalize;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let fruits  = ["apple","banana","grape","water-melon","guava","pom-granate","pear","jack-fruit","pine-apple","pam"]
+        let i = 0;
+        let output = "<table>";
+         output += "<caption> Fruits name</caption>"
+        output += "<tr><th>SL</th><th>NAME</th></tr>"
+
+        while(i<fruits.length){
+        sn = i + 1;
+        output += "</tr><td>" + sn +  "</td>";
+        output += "<td>" + fruits[i]  +  "</td></tr>";
+             i++;
+              }
+         output += "</table>";
+    document.write(output);
+</script>
+</body>
+</html>
