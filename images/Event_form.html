@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+    <form action="thank_you.html" name="myform" onsubmit="return Register()">
+        <fieldset style="width: fit-content;">
+            name: <input type="text" name="fname" placeholder="Enter first name">
+                <input type="text" name="lname" placeholder="Enter last name"><br><br>
+                company: <textarea name="company" id=""></textarea><br><br>
+                Email: <input type="text" name="email" placeholder="example@gmail.com"><br><br>
+                
+                Phone: <input type="text" name="code" placeholder="area code">
+                <input type="text" name="number" placeholder="phone number"><br><br>
+                Subject: <select name="subject" id="">
+                    <option value="">choose option</option>
+                    <option value="dance">dance</option>
+                    <option value="food">food</option>
+                    <option value="dance">dance</option>
+                </select><br><br>
+                Are you an existing customers: <br>
+                yes <input type="radio" name="customer" value="yes">
+               no <input type="radio" name="customer" value="no"><br><br>
+                <button type="submit">Register</button>
+
+        </fieldset>
+    </form>
+    <script>
+        function Register(){
+            let name1 = document.myform.fname.value;
+            let name2 = document.myform.lname.value;
+             let company = document.myform.company.value;
+             let email = document.myform.email.value;
+             let Phone1 = document.myform.code.value;
+             let Phone2 = document.myform.number.value;
+             let subject = document.myform.subject.value;
+             let customer = document.myform.customer.value;
+             let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+             let result = email.search[pattern];
+             
+
+
+           const errors = []
+           if(name1 ==""){
+            errors[errors.length] = "First name can't be empty";
+           }
+           if(name2 ==""){
+            errors[errors.length] = "last name can't be empty";
+        }
+        if(company ==""){
+            errors[errors.length] = "company can't be empty";
+           }
+           if(email ==""){
+            errors[errors.length] = "email can't be empty";
+           }
+           if(Phone2 ==""){
+            errors[errors.length] = "Phone2 can't be empty";
+           }
+           if(subject ==""){
+            errors[errors.length] = "subject can't be empty";
+           }
+           if(customer ==""){
+               errors[errors.length] = "customer can't be empty";
+            }
+        if(result ==-1){
+            errors[errors.length] = "Enter valid Email"
+            }
+           
+            if (errors.length>0){
+        let erroroutput = "<ul>";
+        for(let i = 0; i<errors.length; i++){
+            erroroutput += "<li>" + errors [i] + "</li>";
+        
+
+            }
+                erroroutput += "</ul>"
+                document.getElementById("show").innerHTML = erroroutput;
+                return false
+        } else {
+            //document.getElementById("show").innerHTML = "";
+            return true
+        
+       
+        }
+}
+    </script>
+</body>
+</html>
