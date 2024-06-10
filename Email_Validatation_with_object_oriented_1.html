@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class checkMail{
+            constructor(email){
+                this.gmail = email;
+            }
+            validemail(){
+                let pattern = /[A-z0-9]+@[A-z]+\.[A-z]/;
+                if(this.gmail.search(pattern)){
+                    document.write("email address is wrong");
+                }
+                else{
+                    document.write("email address is correct");
+                }
+            }
+           
+        }
+
+        function abc(){
+            let m = prompt("Enter a  email address")
+            let validate = new checkMail(m);
+            validate.validemail();
+
+        }
+    </script>
+    <button onclick="abc()">click here</button>
+</body>
+</html>
