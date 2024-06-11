@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><fieldset style="width: fit-content;">
+    <legend>Login Register</legend>
+    <form action="" name="monster">
+       <label for="">Email:</label> <br>
+        <input type="text" name="Email" placeholder="Enter your Email"><br>
+        <label for="">Password:</label><br>
+         <input type="password" name="Password" id=""><br><br>
+        <button  onclick="abc()" type="submit">login</button>
+    </fieldset>
+    </form>
+
+   
+    <script>
+        class stallion{
+            constructor(a,p){
+
+                this.fiend = a;
+                this.fiend1 = p;
+            }
+            landlord(){
+                var pattern = /[A-z0-9]+@[A-z]+\.[a-z]{2,4}/;
+                if(this.fiend.search(pattern) ==-1){
+                   alert("Email address is not valid");
+                }else if(this.fiend1.length<6){
+                    alert("password must be 6 length");
+                }else{
+                    document.write("Login successful");
+                }
+            }
+        }
+        function abc(){
+            let a = document.monster.Email.value;
+            let p = document.monster.Password.value;
+            
+           let obj1 = new stallion(a,p);
+           obj1.landlord();
+           
+           }
+        
+
+    </script>
+    
+</body>
+</html>
