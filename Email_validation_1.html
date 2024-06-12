@@ -19,14 +19,14 @@
    
     <script>
         class stallion{
-            constructor(a,p){
+            constructor(ap,po){
 
-                this.fiend = a;
-                this.fiend1 = p;
+                this.fiend = ap;
+                this.fiend1 = po;
             }
             landlord(){
-                var pattern = /[A-z0-9]+@[A-z]+\.[a-z]{2,4}/;
-                if(this.fiend.search(pattern) ==-1){
+                var pattn = /[A-z0-9]+@[A-z]+\.[a-z]{2,4}/;
+                if(this.fiend.search(pattn) ==-1){
                    alert("Email address is not valid");
                 }else if(this.fiend1.length<6){
                     alert("password must be 6 length");
