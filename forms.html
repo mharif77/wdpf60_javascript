@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        <fieldset>
+            <legend>Information</legend>
+        name:<input type="text" name="name" placeholder="Enter your name"><br><br>
+        contact:<input type="text" name="contact" placeholder="Enter your contact"><br><br>
+        remarks: <textarea name="remarks" id=""></textarea><br><br>
+        gender: male<input type="radio" name="gender" value="male">
+                female<input type="radio" name="gender" value="female"><br><br>
+                course: 
+                <input type="checkbox" class="courses" value="NT">NT <br>
+                <input type="checkbox" class="courses" value="IAD">IAD <br>
+                <input type="checkbox" class="courses" value="DDD">DDD <br>
+                <input type="checkbox" class="courses" value="ESAD">ESAD <br><br>
+
+                location: <select name="location" id="">
+                    <option value="choose location">choose location</option>
+                    <option value="banani">banani</option>
+                    <option value="dhanmondi">dhanmondi</option>
+                    <option value="mirpur">mirpur</option>
+                </select><br><br>
+                <button type="submit" onclick="tiny()">submit</button>
+            </fieldset>
+
+    </form>
+    
+    <script>
+        class statllion{
+            constructor(name,contact,remarks,gender,location){
+                this.name1=name;
+                this.contact2=contact;
+                this.remarks3=remarks;
+                this.gender4=gender;
+                
+                this.location6=location;
+               }
+               getinfo(){
+                let taylor = window.open("","arif","width=400, height=600");
+                let output = "<h3>students information</h3>";
+                output += "Name: " + this.name1 +"<br>";
+                output += "contact: " + this.contact2 +"<br>";
+                output += "remarks: " + this.remarks3 +"<br>";
+                output += "gender: " + this.gender4 +"<br>";
+                output += "location: " + this.location6 +"<br>";
+                taylor.document.write(output);
+
+               }
+        }
+
+        function tiny(){
+           // alert("click here")
+           let name1= document.myform.name.value;
+                let contact2= document.myform.contact.value;
+                let remarks3= document.myform.remarks.value;
+                let gender4= document.myform.gender.value;
+                
+                let location6= document.myform.location.value;
+
+               let obj= new statllion(name1,contact2,remarks3,gender4,location6);
+               obj.getinfo();
+
+        }
+       
+    </script>
+
+</body>
+</html>

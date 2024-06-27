@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        email: <input type="text" name="email" placeholder="Enter your email">
+        <button type="button" onclick=" myfunction()" value="cheek">cheek</button>
+    </form>
+    <script>
+        class stallion{
+            constructor(email){
+                this.email4=email;
+            }
+            emailvalidate(){
+                let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+                if(this.email4.search(pattern)==-1){
+                    document.write("email address is wrong")
+                }
+                else{
+                document.write("email address is right")
+            }
+            }
+        }
+        function myfunction(){
+            let e = document.myform.email.value;
+            obj = new stallion(e);
+            obj.emailvalidate();
+            
+        }
+    </script>
+</body>
+</html>
