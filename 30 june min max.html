@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function max_min(){
+        let number = prompt("Enter a number");
+        let num = [25,35,50,80];
+
+        let max = num[0];
+        let min = num[0];
+
+
+        for(let i = 1; i<num.length; i++){
+            if(num[i] > max){
+                max = num[i];
+            }
+        }
+        document.write("Number are- " + num + "<br>");
+        document.write("Maximum Number is- " + max + "<br>");
+
+        for(let i = 1; i<num.length; i++){
+            if(num[i] < min){
+                min = num[i];
+            }
+        }
+
+        document.write("Minimum Number is- " + min + "<br>");
+    }
+    </script>
+    <button onclick="max_min()">Click</button>
+</body>
+</html>
