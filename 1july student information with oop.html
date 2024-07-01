@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        name: <input type="text" name="name" placeholder="Enter your name"><br><br>
+        address: <input type="text" name="address" placeholder="Enter your address"> <br><br>
+        <button type="button" onclick="myFunction()">click here</button>
+    </form>
+    <script>
+        class stallion{
+            constructor (name,address){
+                this.name = name;
+                this.address = address;
+
+            }
+            valiation(){
+                if(this.name == ""){
+                    alert("name must be requied")
+                }
+                else{
+                    alert("successfull information")
+                }
+            }
+        }
+        function myFunction(){
+            let name = document.myform.name.value;
+            let email = document.myform.email.value;
+            
+
+            let obj= new stallion(name,address);
+            obj. valiation()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        name: <input type="text" name="name" placeholder="Enter your name"><br><br>
+        email: <input type="text" name="email" placeholder="Enter your email"><br><br>
+        password: <input type="text" name="password" placeholder="Enter your password"><br><br>
+        repeat: <input type="text" name="repeat" placeholder="Enter your repeat"><br><br>
+        <button type="button" onclick=" myfunction()">click here</button>
+    </form>
+    <script>
+        class emailcheck{
+            constructor (name,email,password,repeat){
+                this.name = name;
+                this.email = email;
+                this.password = password;
+                this.repeat = repeat;
+
+            }
+            validate(){
+                let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
+                let result = this.email.search(pattern);
+                
+                if(this.name == ""){
+                    alert("name must be filled out")
+                }
+                else if (this.email == ""){
+                    alert("email must be filled out")
+                }
+                else if (this.password == ""){
+                    alert("password must be 6 length")
+                }
+                else if (this.repeat == ""){
+                    alert("repeat must be filled out")
+                }
+                else{
+                    alert("form valid")
+                }
+
+            }
+        }
+
+
+        function myfunction(){
+            let name = document.myform.name.value;
+            let email = document.myform.email.value;
+            let password = document.myform.password.value;
+            let repeat = document.myform.repeat.value;
+
+            let obj = new emailcheck(name,email,password,repeat);
+            obj.validate()
+           
+        }
+    </script>
+</body>
+</html>

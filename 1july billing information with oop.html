@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform"> 
+        first name: <input type="text" name="fname" placeholder="Enter your first name"><br><br>
+        last name: <input type="text" name="lname" placeholder="Enter your last name"><br><br>
+        gender: <br>
+        male<input type="radio" name="gender" value="male">
+        female <input type="radio" name="gender" value="female"><br><br>
+        language: <input type="checkbox" name="language" class="language" value="english">english
+         <input type="checkbox" name="language" class="language" value="bangla">bangla
+         <input type="checkbox" name="language" class="language" value="french">french
+         <input type="checkbox" name="language" class="language" value="spanish">spanish <br><br>
+
+         address <textarea name="address" id="" placeholder="address here"></textarea><br><br>
+
+            district:<select name="district" id="">district
+           <option value="">choose one</option>
+            <option value="dhaka">dhaka</option>
+            <option value="cumilla">cumilla</option>
+            <option value="sylhet">sylhet</option>
+        </select><br><br>
+        zip <input type="text" name="zip" placeholder="enter your zip code"><br><br>
+        <button type="button" onclick=" myFunction()">click here</button>
+
+    </form>
+    <script>
+        class stallion{
+            constructor(fname,lname, gender,address,zip){
+                this.fname = fname;
+                this.lname =  lname;
+                this.gd =  gender;
+                //this.lg =  language;
+                this.add =  address;
+                this.zip =  zip;
+
+            }
+             
+            validation(){
+                let output;
+              output = "<h1>Billing Information</h1>";
+              output += "fname: " + this.fname + "<br>";
+              output += "lname: " + this. lname + "<br>";
+              output += "gender: " + this.gd + "<br>";
+              //output += "language: " + this.lg + "<br>";
+              output += "address: " + this.add + "<br>";
+              output += "zip: " + this.zip + "<br>";
+              
+              let mw = window.open("", "abc", "width=800, height=600"); 
+              mw.document.write(output);
+               }
+        }
+        function myFunction() {
+               
+               let fn = document.myform.fname.value;
+               let ln = document.myform.lname.value;
+               let gd = document.myform.gender.value;
+               //let lg = document.getElementsByClassName("language")
+
+               let add = document.myform.address.value;
+              let zip = document.myform.zip.value;
+              
+
+              let obj = new stallion(fn,ln, gd,add,zip)
+              obj.validation();
+                }
+          
+    </script>
+</body>
+</html>

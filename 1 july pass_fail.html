@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        
+        <input type="number" name="name" placeholder="Enter your mcq number"><br><br>
+        <input type="number" name="name1" placeholder="Enter your descriptive number"><br><br>
+        <input type="number" name="name2" placeholder="Enter your evidence number"><br><br>
+        <button type="button" onclick="pass_fail()">click</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function pass_fail(){
+            let mcq = document.myform.name.value;
+            let des = document.myform.name1.value;
+            let evi = document.myform.name2.value;
+            if(mcq>=80 && des>=60 && evi >=60){
+                document.getElementById("result").innerHTML = " You have Passed"
+
+            }else{
+                document.getElementById("result").innerHTML = "You have failed"
+            }
+
+        }
+    </script>
+</body>
+</html>

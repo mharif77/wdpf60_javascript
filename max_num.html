@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunction(){
+
+        
+        let num = [8,9,5,7,2,];
+        let max = num[0];
+        let min = num[0];
+        for(let i = 1; i<num.length; i++){
+            if(num[i]> max){
+                max = num[i]
+            }
+            if(num[i]< min){
+                min = num[i]
+            }
+        }
+        document.write("numbers    " + num + "<br>");
+        document.write("maximum numbers " + max + "<br>");
+        document.write("minimum numbers " + min + "<br>");
+    }
+    </script>
+    <button onclick="myFunction()">click here</button>
+</body>
+</html>
